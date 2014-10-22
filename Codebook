@@ -1,0 +1,24 @@
+##CodeBook:
+
+This codebook will describe the variable names and transformations to the original dataset taken from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip This dataset describes observations
+
+This file was unzipped into the working directory.
+
+The X data provided observations of various features (found in original features.txt file). The X data for training and testing were merged into one dataset using rbind.
+
+The Y data provided manual observations based on the activity a person was doing when the X data observations were recorded. Y data was merged for training and testing using cbind.
+
+Both X and Y datasets were merged to provide 1 comprehensive dataset using cbind.
+
+Labels were added to describe the observations of the X data from features.txt (561 variable names). Y was named activity and subject subject giving us 563 variables and 10000 ish rows.
+
+Information on the subject (the unique person who was wearing the recording equipment) of each observation was added to the dataset.
+
+The original data provided numbers for each activity. I transformed the number codes into the name of the activity as follows: 1 = WALKING 2 = WALKING_UPSTAIRS 3 = WALKING_DOWNSTAIRS 4 = SITTING 5 = STANDING 6 = LAYING
+
+I then removed the old activity number column.
+
+I took out only the columns showing observations of means and standard deviations, using grep, all other columns were discarded (leaving 83 variables).
+
+The data was melted with "subject" and "activity" as the ids. It was then casted to show the averages of each measurement for each activity and each subject. The resulting data file can be seen in the file tidydata.txt
+
