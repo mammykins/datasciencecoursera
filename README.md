@@ -15,6 +15,25 @@ and tidies it up.
  5. Creates a second, independent tidy data set with the average of
    each variable for each activity and each subject.
 
+##How it goes about it:
+|assumption UCI data folder in wd
+
+First tehs script checks all packages are installed and loaded necessary.
+
+The x train data is rbind onto xtest.
+Appropriate column labels are defined based on features.txt
+Subject and activity are cbind onto end creating 563 variables total.
+Renamed as subject and activity.
+Variables with mean and std selected using grep.
+Woops we lost subject and activity but as order hasnt changed we just re-append it.
+grouped or subsetted by activity, activity_description column added with appropriate character name given.
+rebound the new subsets using rbind, removed the old activity column.
+Melted the data and reordered using subject and activity_description.
+Wrote as table.
+##output
+#tidy_data.txt
+
+
 
 ## Motivation
 
