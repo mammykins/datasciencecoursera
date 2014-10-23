@@ -16,22 +16,22 @@ and tidies it up.
    each variable for each activity and each subject.
 
 ##How it goes about it:
-|assumption UCI data folder in wd
+#assumption UCI data folder in wd
 
-First tehs script checks all packages are installed and loaded necessary.
+First the script checks all packages are installed and loaded as necessary.
 
-The x train data is rbind onto xtest.
-Appropriate column labels are defined based on features.txt
-Subject and activity are cbind onto end creating 563 variables total.
-Renamed as subject and activity.
-Variables with mean and std selected using grep.
-Woops we lost subject and activity but as order hasnt changed we just re-append it.
-grouped or subsetted by activity, activity_description column added with appropriate character name given.
-rebound the new subsets using rbind, removed the old activity column.
-Melted the data and reordered using subject and activity_description.
-Wrote as table.
+1. The x train data is rbind onto xtest.
+2. Appropriate column labels are defined based on features.txt
+3. Subject and activity are cbind onto end creating 563 variables total.
+4. Renamed as subject and activity.
+5. Variables with mean and std selected using grep.
+6. Woops we lost subject and activity but as order hasnt changed we just re-append it.
+7. grouped or subsetted by activity, activity_description column added with appropriate character name given.
+8. rebound the new subsets using rbind, removed the old activity column.
+9. Melted the data and reordered using subject and activity_description.
+10.Wrote as table.
 ##output
-#tidy_data.txt
+tidy_data.txt
 
 
 
