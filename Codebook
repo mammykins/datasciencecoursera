@@ -20,5 +20,7 @@ I then removed the old activity number column.
 
 I took out only the columns showing observations of means and standard deviations, using grep, all other columns were discarded (leaving 83 variables).
 
+In the discussion forums someone mentioned MeanFreq should be removed, so I manually went through and wrote down which column variables these were and dropped them from teh dataframe as this was quicker than looking up a clever way to do it..
+
 The data was melted with "subject" and "activity" as the ids. It was then casted to show the averages of each measurement for each activity and each subject. The resulting data file can be seen in the file tidydata.txt
 
